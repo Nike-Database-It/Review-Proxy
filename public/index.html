@@ -6,33 +6,50 @@
     <title>FEC Demo</title>
   </head>
   <body>
-    <div id="Info"></div>
-    <div id="CountDown"></div>
-    <div id="Related"></div>
-    <div id="Reviews"></div>
+    <div id="navigation-search"></div>
+    <div id="main_photo_gallery"></div>
+    <div id="shoe_name_and_colors"></div>
+    <div id="sizing-cart_service"></div>
+    <div id="reviews"></div>
+    <div id="carousel"></div>
+    <div id="page-footer"></div>
     <script src="/lib/react.development.js"></script>
     <script src="/lib/react-dom.development.js"></script>
-    <script src="http://localhost:3001/app.js"></script>
-    <script src="http://localhost:3002/app.js"></script>
-    <script src="http://localhost:3003/app.js"></script>
-    <script src="http://localhost:3004/app.js"></script>
-    <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
+    <script src="http://localhost:3001/bundle.js"></script>
+    <script src="http://localhost:3002/bundle.js"></script>
+    <script src="http://localhost:3003/bundle.js"></script>
+    <script src="http://localhost:3004/bundle.js"></script>
+    <script src="http://localhost:3005/mpg_bundle.js"></script>
+    <script src="http://localhost:3006/n&c_bundle.js"></script>
+    <script src="http://localhost:3007/bundle.js"></script>
     <script>
       ReactDOM.render(
-        React.createElement(Info),
-        document.getElementById('Info')
+        React.createElement(Navigation),
+        document.getElementById('navigation-search')
       );
       ReactDOM.render(
-        React.createElement(CountDown),
-        document.getElementById('CountDown')
+        React.createElement(Gallery),
+        document.getElementById('main_photo_gallery')
       );
       ReactDOM.render(
-        React.createElement(Related),
-        document.getElementById('Related')
+        React.createElement(Colors),
+        document.getElementById('shoe_name_and_colors')
       );
+      ReactDOM.render(
+        React.createElement(SizesAndCart),
+        document.getElementById('sizing-cart_service')
+      ); 
       ReactDOM.render(
         React.createElement(Reviews),
-        document.getElementById('Reviews')
+        document.getElementById('reviews')
+      );
+      ReactDOM.render(
+        React.createElement(ProductCarousel),
+        document.getElementById('carousel')
+      );
+      ReactDOM.render(
+        React.createElement(Footer),
+        document.getElementById('page-footer')
       );
     </script>
   </body>
