@@ -4,7 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./server.js"
+    "start": "nodemon ./server.js",
+    "start-all": "concurrently --kill-others 'npm run init-3001' 'npm run init-3002' 'npm run init-3003' 'npm run init-3004' 'npm run init-3005' 'npm run init-3006' 'npm run init-3007'",
+    "init-3001": "nodemon ./modules/01-Carousel/server/server.js",
+    "init-3002": "nodemon ./modules/02-Navigation/server/server.js",
+    "init-3003": "nodemon ./modules/03-Sizing/server/index.js",
+    "init-3004": "nodemon ./modules/04-Reviews/server/server.js",
+    "init-3005": "nodemon ./modules/05-Sizing/server/server.js",
+    "init-3006": "nodemon ./modules/06-Colors/server/server.js",
+    "init-3007": "nodemon ./modules/07-Footer/server/server.js",
   },
   "keywords": [],
   "author": "",
@@ -13,5 +21,8 @@
     "axios": "^0.18.0",
     "express": "^4.16.2",
     "morgan": "^1.9.0"
+  },
+  "devDependencies": {
+    "concurrently": "^4.0.1"
   }
 }
