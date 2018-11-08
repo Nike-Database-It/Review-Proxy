@@ -12,7 +12,7 @@
     "init-3004": "nodemon ./modules/04-Reviews/server/server.js",
     "init-3005": "nodemon ./modules/05-Sizing/server/server.js",
     "init-3006": "nodemon ./modules/06-Colors/server/server.js",
-    "init-3007": "nodemon ./modules/07-Footer/server/server.js",
+    "init-3007": "nodemon ./modules/07-Footer/server/server.js"
   },
   "keywords": [],
   "author": "",

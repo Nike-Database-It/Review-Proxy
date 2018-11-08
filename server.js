@@ -11,6 +11,7 @@ const routes = {
   reviews: 3004,
   images: 3005,
   colors: 3006,
+  styles: 3006,
 }
 
 app.use(morgan('dev'));
@@ -25,6 +26,9 @@ app.use((req, res, next) => {
 app.get('/:shoeID/:service', (req, res) => {
   const { shoeID } = req.params;
   const { service } = req.params;
+  if(service === 'styles') {
+    console.log('styles');
+  }
   const URL = `http://localhost:${routes[service]}/${shoeID}/${service}`;
   console.log('outgoing URL :', URL);
   axios.get(URL)
